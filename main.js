@@ -1,13 +1,16 @@
-let count = 99
+let rows = prompt('How many rows?')
+let cols = prompt('How many columns?')
+let grid = document.querySelector('#grid')
 
-while (count < 98) {
-  if (count > 1) {
-    console.log('${count} crows on the wall. ${count}crows. I fell down became a wight. ${count-1} crows left')
-    count -=1
+let i = 0
+  while (i < parseInt(rows * cols)) {
+  let div = document.createElement('div')
+  if (1 % 2 == 0) {
+    div.style.background = 'red'
   } else {
-    console.log('I grow on the wall. No one left to defend westeros now.')
+    div.style.background = 'black'
   }
+  grid.appendChild(div)
+  i += 1
 }
-//tring Interpolation
-//How do u write an anonymous function in pythonn
-//How to do string interpool. In python
+grid.style.gridTemplate = 'repeat(${rows}, 50px) / repeat(${cols}, 50px)'
