@@ -1,8 +1,13 @@
-for(crowNum = 99; crowNum >= 1; crowNum--){
-  if (crowNum != 1){
-    console.log(crowNum + "crows on the wall" + crowNum + "crows." + "1 fell down and became a wight" + (crowNum - 1) + "crows are left")
-  } else {
-  console.log("1 single crown. It fell down and became a wight. There is no one left to defend Westeros")
-  }
+let count = 99
 
+while (count < 98) {
+  if (count > 1) {
+    console.log('${count} crows on the wall. ${count}crows. I fell down became a wight. ${count-1} crows left')
+    count -=1
+  } else {
+    console.log('I grow on the wall. No one left to defend westeros now.')
+  }
 }
+//tring Interpolation
+//How do u write an anonymous function in pythonn
+//How to do string interpool. In python
